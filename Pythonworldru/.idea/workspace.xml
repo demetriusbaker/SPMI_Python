@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2aa83a2-2c8e-4b39-b50f-2e41340cac4e" name="Changes" comment="changed dir">
+      <change afterPath="$PROJECT_DIR$/../LR/LaboratoryWork/lb1/task2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LR/LaboratoryWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LR/LaboratoryWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LR/LaboratoryWork/lb1/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LR/LaboratoryWork/lb1/task1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../df/python3-problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="ReaderModeSettings">
