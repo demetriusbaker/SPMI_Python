@@ -9,6 +9,10 @@ class EmptyFileException(Exception):
     pass
 
 
+class IncorrectExtensionException(Exception):
+    pass
+
+
 def for_print(students: list[Student]):
     for s in students:
         print(s.first_name, s.last_name, s.mark)
@@ -27,12 +31,18 @@ if __name__ == '__main__':
     fileName = input()
 
     try:
+        if not fileName.__contains__(".txt"):
+            raise IncorrectExtensionException()
+
         file = open(fileName, encoding='utf-8')
     except FileNotFoundError:
         print("Isn't exist some file:", fileName)
+    except IncorrectExtensionException:
+        print("It was used incorrect extension!")
     else:
         try:
             information = file.read()
+
             if len(information) == 0:
                 raise EmptyFileException()
         except EmptyFileException:

@@ -12,16 +12,30 @@ def get_count_of_symbol(symbol, text):
     return count
 
 
+class IncorrectExtensionException(Exception):
+    pass
+
+
 if __name__ == '__main__':
-    print("Enter text file name (without extension): ")
+    print("Enter text file name: ")
     fileName = input()
 
     try:
-        file = open(fileName + '.txt', encoding='utf-8')
+        if not fileName.__contains__(".txt"):
+            raise IncorrectExtensionException()
+
+        file = open(fileName, encoding='utf-8')
     except FileNotFoundError:
         print("Isn't exist some file:", fileName)
+    except IncorrectExtensionException:
+        print("It was used incorrect extension!")
     else:
         information = file.read()
+
+        if len(information) == 0:
+            print("This file is empty!")
+            file.close()
+            exit(0)
 
         print(information, '\n')
 
@@ -53,3 +67,5 @@ if __name__ == '__main__':
             print("{} -> {}".format(letter.symbol, letter.count))
 
         print()
+
+        file.close()

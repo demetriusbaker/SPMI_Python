@@ -17,6 +17,13 @@ def draw_square(symbol: str):
         input_message = 'Give a dimension for your construction: '
         dimension = int(input(input_message))
 
+        if dimension <= 0:
+            print("You inputted negative dimension value!")
+            return
+        if dimension > 41:
+            print("You inputted too big value (max: 40)!")
+            return
+
         print()
 
         for y in range(dimension):
@@ -33,6 +40,13 @@ def draw_tower(symbol: str):
         input_message = 'Give a dimension for your construction: '
         dimension = int(input(input_message))
         space = ''
+
+        if dimension <= 0:
+            print("You inputted negative dimension value!")
+            return
+        if dimension > 41:
+            print("You inputted too big value (max: 40)!")
+            return
 
         print()
 
@@ -69,7 +83,9 @@ def change_symbol(sym: str):
 
 
 if __name__ == '__main__':
-    special_symbol = 'Ы'  # ascii-symbol number 219
+    special_symbol = '▀'  # ascii-symbol number 219
+    # Maybe horizontal spaces between symbols string
+    # If you have OS: Windows 11 or macOS!
 
     while True:
         print_menu(special_symbol)
